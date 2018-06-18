@@ -24,7 +24,9 @@ Pod::Spec.new do |s|
  
   s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSNavigationController.git", :tag => s.version }
 
-  s.source_files  = "TSNavigationController/code"
+  s.source_files  = "TSNavigationController/code/main", "TSNavigationController/code/auxiliary"
+
+  s.resources = "TSNavigationController/code/source"
 
   s.framework  = "UIKit","Foundation"
 
