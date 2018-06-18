@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let tabbar = UITabBarController()
+        
+        let home = TSNavigationController(rootViewController: TSTestHomeViewController())
+        let userItem = UITabBarItem(title: "home", image: nil, selectedImage: nil)
+        home.tabBarItem = userItem
+        
+        let second = TSNavigationController(rootViewController: TSTabbarSecondViewController())
+        let secondItem = UITabBarItem(title: "second", image: nil, selectedImage: nil)
+        second.tabBarItem = secondItem
+        
+        tabbar.viewControllers = [home, second]
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        self.window?.rootViewController = tabbar
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
