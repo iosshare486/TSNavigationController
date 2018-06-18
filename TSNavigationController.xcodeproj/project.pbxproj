@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		F55DB77D20D78FA60055A3A6 /* TSNavigationController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F55DB77B20D78FA50055A3A6 /* TSNavigationController.podspec */; };
 		F55DB77E20D78FA60055A3A6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F55DB77C20D78FA60055A3A6 /* LICENSE */; };
+		F55DB78020D7B1790055A3A6 /* TSNavigationController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F55DB77F20D7B1790055A3A6 /* TSNavigationController.bundle */; };
 		F55F0B9B20D5FE0F00BEC5BC /* TSTestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F0B9A20D5FE0F00BEC5BC /* TSTestHomeViewController.swift */; };
 		F55F0BA120D6001000BEC5BC /* TSTabbarSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F0BA020D6001000BEC5BC /* TSTabbarSecondViewController.swift */; };
 		F55F0BA320D65FE100BEC5BC /* UIViewController+NavigationBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F0BA220D65FE100BEC5BC /* UIViewController+NavigationBarConfig.swift */; };
-		F55F0BA820D6614600BEC5BC /* tsnavigitionBackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F55F0BA520D6614600BEC5BC /* tsnavigitionBackArrow.png */; };
-		F55F0BA920D6614600BEC5BC /* tsnavigitionBackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55F0BA620D6614600BEC5BC /* tsnavigitionBackArrow@2x.png */; };
-		F55F0BAA20D6614600BEC5BC /* tsnavigitionBackArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F55F0BA720D6614600BEC5BC /* tsnavigitionBackArrow@3x.png */; };
 		F57E08C620D4BB170048415F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E08C520D4BB170048415F /* AppDelegate.swift */; };
 		F57E08C820D4BB170048415F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E08C720D4BB170048415F /* ViewController.swift */; };
 		F57E08CB20D4BB170048415F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57E08C920D4BB170048415F /* Main.storyboard */; };
@@ -47,12 +45,10 @@
 /* Begin PBXFileReference section */
 		F55DB77B20D78FA50055A3A6 /* TSNavigationController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSNavigationController.podspec; sourceTree = SOURCE_ROOT; };
 		F55DB77C20D78FA60055A3A6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		F55DB77F20D7B1790055A3A6 /* TSNavigationController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TSNavigationController.bundle; sourceTree = "<group>"; };
 		F55F0B9A20D5FE0F00BEC5BC /* TSTestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTestHomeViewController.swift; sourceTree = "<group>"; };
 		F55F0BA020D6001000BEC5BC /* TSTabbarSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTabbarSecondViewController.swift; sourceTree = "<group>"; };
 		F55F0BA220D65FE100BEC5BC /* UIViewController+NavigationBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarConfig.swift"; sourceTree = "<group>"; };
-		F55F0BA520D6614600BEC5BC /* tsnavigitionBackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tsnavigitionBackArrow.png; sourceTree = "<group>"; };
-		F55F0BA620D6614600BEC5BC /* tsnavigitionBackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tsnavigitionBackArrow@2x.png"; sourceTree = "<group>"; };
-		F55F0BA720D6614600BEC5BC /* tsnavigitionBackArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tsnavigitionBackArrow@3x.png"; sourceTree = "<group>"; };
 		F57E08C220D4BB170048415F /* TSNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57E08C520D4BB170048415F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57E08C720D4BB170048415F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,16 +119,6 @@
 			path = auxiliary;
 			sourceTree = "<group>";
 		};
-		F55F0BA420D6601D00BEC5BC /* source */ = {
-			isa = PBXGroup;
-			children = (
-				F55F0BA520D6614600BEC5BC /* tsnavigitionBackArrow.png */,
-				F55F0BA620D6614600BEC5BC /* tsnavigitionBackArrow@2x.png */,
-				F55F0BA720D6614600BEC5BC /* tsnavigitionBackArrow@3x.png */,
-			);
-			path = source;
-			sourceTree = "<group>";
-		};
 		F57E08B920D4BB170048415F = {
 			isa = PBXGroup;
 			children = (
@@ -191,9 +177,9 @@
 		F57E08F520D502B90048415F /* code */ = {
 			isa = PBXGroup;
 			children = (
+				F55DB77F20D7B1790055A3A6 /* TSNavigationController.bundle */,
 				F55F0B9E20D5FE2A00BEC5BC /* main */,
 				F55F0B9F20D5FE5600BEC5BC /* auxiliary */,
-				F55F0BA420D6601D00BEC5BC /* source */,
 			);
 			path = code;
 			sourceTree = "<group>";
@@ -302,14 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55DB78020D7B1790055A3A6 /* TSNavigationController.bundle in Resources */,
 				F55DB77D20D78FA60055A3A6 /* TSNavigationController.podspec in Resources */,
 				F57E08D020D4BB190048415F /* LaunchScreen.storyboard in Resources */,
 				F55DB77E20D78FA60055A3A6 /* LICENSE in Resources */,
 				F57E08CD20D4BB190048415F /* Assets.xcassets in Resources */,
 				F57E08CB20D4BB170048415F /* Main.storyboard in Resources */,
-				F55F0BA820D6614600BEC5BC /* tsnavigitionBackArrow.png in Resources */,
-				F55F0BA920D6614600BEC5BC /* tsnavigitionBackArrow@2x.png in Resources */,
-				F55F0BAA20D6614600BEC5BC /* tsnavigitionBackArrow@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

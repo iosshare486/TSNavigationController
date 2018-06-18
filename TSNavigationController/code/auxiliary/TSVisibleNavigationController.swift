@@ -29,8 +29,11 @@ public class TSVisibleNavigationController: UINavigationController {
     
     override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
+        let path = Bundle.main.path(forResource: "TSNavigationController", ofType: "bundle")
+        let bundle = Bundle(path: path!)
+        
         let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-        leftButton.setImage(#imageLiteral(resourceName: "tsnavigitionBackArrow.png"), for: .normal)
+        leftButton.setImage(UIImage.init(named: "tsnavigitionBackArrow", in: bundle, compatibleWith: nil), for: .normal)
         leftButton.adjustsImageWhenHighlighted = false
         leftButton.addTarget(self, action: #selector(pop), for: .touchUpInside)
         leftButton.contentHorizontalAlignment = .left
