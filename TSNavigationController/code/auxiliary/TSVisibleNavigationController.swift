@@ -10,24 +10,24 @@
 
 import UIKit
 
-class TSVisibleNavigationController: UINavigationController {
+public class TSVisibleNavigationController: UINavigationController {
     
-    override func popViewController(animated: Bool) -> UIViewController? {
+    override public func popViewController(animated: Bool) -> UIViewController? {
         
         return self.parent?.navigationController?.popViewController(animated: animated)
     }
     
-    override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+    override public func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         
         return self.parent?.navigationController?.popToViewController(viewController, animated: animated)
     }
     
-    override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+    override public func popToRootViewController(animated: Bool) -> [UIViewController]? {
         
         return self.parent?.navigationController?.popToRootViewController(animated: animated)
     }
     
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    override public func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
         leftButton.setImage(#imageLiteral(resourceName: "tsnavigitionBackArrow.png"), for: .normal)
@@ -45,13 +45,13 @@ class TSVisibleNavigationController: UINavigationController {
         self.parent?.navigationController?.popViewController(animated: true)
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

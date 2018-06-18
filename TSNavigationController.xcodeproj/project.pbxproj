@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55DB77D20D78FA60055A3A6 /* TSNavigationController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F55DB77B20D78FA50055A3A6 /* TSNavigationController.podspec */; };
+		F55DB77E20D78FA60055A3A6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F55DB77C20D78FA60055A3A6 /* LICENSE */; };
 		F55F0B9B20D5FE0F00BEC5BC /* TSTestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F0B9A20D5FE0F00BEC5BC /* TSTestHomeViewController.swift */; };
 		F55F0BA120D6001000BEC5BC /* TSTabbarSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F0BA020D6001000BEC5BC /* TSTabbarSecondViewController.swift */; };
 		F55F0BA320D65FE100BEC5BC /* UIViewController+NavigationBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F0BA220D65FE100BEC5BC /* UIViewController+NavigationBarConfig.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F55DB77B20D78FA50055A3A6 /* TSNavigationController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSNavigationController.podspec; sourceTree = SOURCE_ROOT; };
+		F55DB77C20D78FA60055A3A6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		F55F0B9A20D5FE0F00BEC5BC /* TSTestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTestHomeViewController.swift; sourceTree = "<group>"; };
 		F55F0BA020D6001000BEC5BC /* TSTabbarSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTabbarSecondViewController.swift; sourceTree = "<group>"; };
 		F55F0BA220D65FE100BEC5BC /* UIViewController+NavigationBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBarConfig.swift"; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 		F57E08C420D4BB170048415F /* TSNavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				F55DB77C20D78FA60055A3A6 /* LICENSE */,
+				F55DB77B20D78FA50055A3A6 /* TSNavigationController.podspec */,
 				F57E08F520D502B90048415F /* code */,
 				F55F0B9920D5FDF400BEC5BC /* test */,
 				F57E08C520D4BB170048415F /* AppDelegate.swift */,
@@ -296,7 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55DB77D20D78FA60055A3A6 /* TSNavigationController.podspec in Resources */,
 				F57E08D020D4BB190048415F /* LaunchScreen.storyboard in Resources */,
+				F55DB77E20D78FA60055A3A6 /* LICENSE in Resources */,
 				F57E08CD20D4BB190048415F /* Assets.xcassets in Resources */,
 				F57E08CB20D4BB170048415F /* Main.storyboard in Resources */,
 				F55F0BA820D6614600BEC5BC /* tsnavigitionBackArrow.png in Resources */,

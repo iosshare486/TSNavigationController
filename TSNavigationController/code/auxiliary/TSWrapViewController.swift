@@ -8,17 +8,17 @@
 
 import UIKit
 
-class TSWrapViewController: UIViewController {
+public class TSWrapViewController: UIViewController {
     
     //防止创建方式不正确
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     //该类只能用该方式创建
-    static func wrapViewController(withViewController viewContoller: UIViewController) -> TSWrapViewController {
+    public static func wrapViewController(withViewController viewContoller: UIViewController) -> TSWrapViewController {
         
         let wrapNavController: TSVisibleNavigationController = TSVisibleNavigationController()
         
@@ -30,13 +30,13 @@ class TSWrapViewController: UIViewController {
         return wrapViewController
     }
     
-    func rootViewController() -> UIViewController {
+    public func rootViewController() -> UIViewController {
         
         let nav: TSVisibleNavigationController = self.childViewControllers.first as! TSVisibleNavigationController
         return nav.viewControllers.first ?? nav
     }
     
-    override var tabBarItem: UITabBarItem! {
+    public override var tabBarItem: UITabBarItem! {
         
         set {
             
@@ -47,7 +47,7 @@ class TSWrapViewController: UIViewController {
             return self.rootViewController().tabBarItem
         }
     }
-    override var title: String? {
+    public override var title: String? {
         
         set {
             self.title = newValue
