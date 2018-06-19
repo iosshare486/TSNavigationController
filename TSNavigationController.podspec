@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TSNavigationController"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "this is app navigation structure"
 
   s.description  = <<-DESC
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "TSNavigationController/code/main", "TSNavigationController/code/auxiliary"
 
-  s.resources = "TSNavigationController/code/source"
+  s.resources = "TSNavigationController/code/TSNavigationController.bundle"
 
   s.framework  = "UIKit","Foundation"
 
