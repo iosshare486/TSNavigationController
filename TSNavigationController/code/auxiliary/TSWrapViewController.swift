@@ -36,20 +36,20 @@ public class TSWrapViewController: UIViewController {
         
         let wrapViewController = TSWrapViewController()
         wrapViewController._visibleNavigationController = wrapNavController
-        wrapNavController.hidesBottomBarWhenPushed = viewContoller.hidesBottomBarWhenPushed
+        wrapViewController.hidesBottomBarWhenPushed = viewContoller.hidesBottomBarWhenPushed
         wrapViewController.view.addSubview(wrapNavController.view)
         wrapViewController.addChildViewController(wrapNavController)
         
-        wrapViewController.addObserver(viewContoller, forKeyPath: "hidesBottomBarWhenPushed", options: .new, context: nil)
+        viewContoller.addObserver(wrapViewController, forKeyPath: "hidesBottomBarWhenPushed", options: .new, context: nil)
         
         return wrapViewController
     }
     
     public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
-        if let hide: Bool = change![NSKeyValueChangeKey.newKey] as? Bool {
+        if let hidden: Bool = change![NSKeyValueChangeKey.newKey] as? Bool {
             
-            self.hidesBottomBarWhenPushed = hide
+            self.hidesBottomBarWhenPushed = hidden
         }
     }
     
