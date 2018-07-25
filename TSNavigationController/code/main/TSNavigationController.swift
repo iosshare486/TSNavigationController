@@ -10,6 +10,27 @@ import UIKit
 
 public class TSNavigationController: UINavigationController, UINavigationControllerDelegate {
     
+    private var _rootViewController: UIViewController? = nil
+    private var _visibleNavitionController: TSVisibleNavigationController? = nil
+    
+    public var rootViewController: UIViewController? {
+        
+        get {
+            
+            return _rootViewController
+        }
+    }
+    
+    public var visibleNavitionController: TSVisibleNavigationController? {
+        
+        get {
+            
+            return _visibleNavitionController
+        }
+    }
+    
+    
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarHidden(true, animated: false)
@@ -26,7 +47,13 @@ public class TSNavigationController: UINavigationController, UINavigationControl
         
         super.init(rootViewController: rootViewController)
         
-        self.viewControllers = [TSWrapViewController.wrapViewController(withViewController: rootViewController)]
+        self._rootViewController = rootViewController
+        
+        let wrapViewController = TSWrapViewController.wrapViewController(withViewController: rootViewController)
+        
+        self._visibleNavitionController = wrapViewController.visibleNavigationController
+        
+        self.viewControllers = [wrapViewController]
     }
     
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {

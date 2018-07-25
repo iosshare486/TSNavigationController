@@ -10,6 +10,14 @@ import UIKit
 
 public class TSWrapViewController: UIViewController {
     
+    private var _visibleNavigationController: TSVisibleNavigationController? = nil
+    public var visibleNavigationController: TSVisibleNavigationController? {
+        
+        get {
+            return _visibleNavigationController
+        }
+    }
+    
     //防止创建方式不正确
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,6 +33,7 @@ public class TSWrapViewController: UIViewController {
         wrapNavController.viewControllers = [viewContoller]
         
         let wrapViewController = TSWrapViewController()
+        wrapViewController._visibleNavigationController = wrapNavController
         wrapViewController.view.addSubview(wrapNavController.view)
         wrapViewController.addChildViewController(wrapNavController)
         return wrapViewController
