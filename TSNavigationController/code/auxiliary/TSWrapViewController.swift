@@ -11,6 +11,7 @@ import UIKit
 public class TSWrapViewController: UIViewController {
     
     private var _visibleNavigationController: TSVisibleNavigationController? = nil
+    private var visibleViewController: UIViewController?
     public var visibleNavigationController: TSVisibleNavigationController? {
         
         get {
@@ -18,7 +19,12 @@ public class TSWrapViewController: UIViewController {
         }
     }
     
-    
+    deinit {
+        
+        if let vc = visibleViewController {
+            vc.removeObserver(self, forKeyPath: "hidesBottomBarWhenPushed", context: nil)
+        }
+    }
     
     //防止创建方式不正确
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -36,6 +42,7 @@ public class TSWrapViewController: UIViewController {
         
         let wrapViewController = TSWrapViewController()
         wrapViewController._visibleNavigationController = wrapNavController
+        wrapViewController.visibleViewController = viewContoller
         wrapViewController.hidesBottomBarWhenPushed = viewContoller.hidesBottomBarWhenPushed
         wrapViewController.view.addSubview(wrapNavController.view)
         wrapViewController.addChildViewController(wrapNavController)
