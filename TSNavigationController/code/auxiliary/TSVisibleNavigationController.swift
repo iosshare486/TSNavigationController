@@ -36,14 +36,7 @@ public class TSVisibleNavigationController: UINavigationController {
         
         let image = UIImage.init(named: "tsnavigitionBackArrow", in: bundle, compatibleWith: nil)
         
-//        let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-//        leftButton.setImage(image, for: .normal)
-//        leftButton.adjustsImageWhenHighlighted = false
-//        leftButton.addTarget(self, action: #selector(pop), for: .touchUpInside)
-//        leftButton.contentHorizontalAlignment = .left
-        let nagetiveSpacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: nil, action: nil)
-        nagetiveSpacer.width = -8
-        viewController.navigationItem.leftBarButtonItems = [nagetiveSpacer , UIBarButtonItem(image: image, style: UIBarButtonItemStyle.done, target: self, action: #selector(pop))]
+        viewController.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: image, style: UIBarButtonItemStyle.done, target: self, action: #selector(pop))]
         self.parent?.navigationController?.pushViewController(TSWrapViewController.wrapViewController(withViewController: viewController), animated: animated)
     }
     
