@@ -42,6 +42,17 @@ public extension UIViewController {
         }
     }
     
+    //显示底部黑线
+    public func ts_shadowShow() {
+        if let barBackgroundView = navigationController?.navigationBar.subviews[0] {
+            let valueForKey = barBackgroundView.value(forKey:)
+            
+            if let shadowView = valueForKey("_shadowView") as? UIView {
+                shadowView.isHidden = false
+            }
+        }
+    }
+    
     //彻底隐藏导航栏
     public func ts_navBarHiddenAll() {
         navigationController?.setNavigationBarHidden(true, animated: true)
