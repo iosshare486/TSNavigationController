@@ -94,7 +94,7 @@ public extension UIViewController {
             navigationController?.navigationBar.subviews.first?.insertSubview(ts_naviBackgroundImageView ?? UIImageView(), at: 0)
         }
         if ts_naviBackgroundImageView?.isHidden == true {
-            ts_naviBackgroundImageView?.isHidden == false
+            ts_naviBackgroundImageView?.isHidden = false
         }
         ts_naviBackgroundImageView?.image = img
     }
