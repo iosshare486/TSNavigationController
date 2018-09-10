@@ -29,6 +29,7 @@ public extension UIViewController {
     public func ts_navBarHiddenBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         ts_shadowHidden()
+        self.ts_naviBackgroundImageView?.isHidden = true
     }
     
     //隐藏底部黑线
@@ -81,7 +82,8 @@ public extension UIViewController {
     public func ts_navBarImg(img: UIImage) {
         
         if ts_naviBackgroundImageView == nil {
-            ts_navBarHiddenBar()
+            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+            ts_shadowHidden()
             let naviHeight = ts_naviBarHeight()
             
             
@@ -91,7 +93,9 @@ public extension UIViewController {
             ts_naviBackgroundImageView?.clipsToBounds = true
             navigationController?.navigationBar.subviews.first?.insertSubview(ts_naviBackgroundImageView ?? UIImageView(), at: 0)
         }
-        
+        if ts_naviBackgroundImageView?.isHidden == true {
+            ts_naviBackgroundImageView?.isHidden == false
+        }
         ts_naviBackgroundImageView?.image = img
     }
     
