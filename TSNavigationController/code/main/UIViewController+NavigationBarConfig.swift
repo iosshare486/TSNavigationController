@@ -34,7 +34,7 @@ public extension UIViewController {
     
     //隐藏底部黑线
     public func ts_shadowHidden() {
-        if let barBackgroundView = navigationController?.navigationBar.subviews[0] {
+        if let barBackgroundView = navigationController?.navigationBar.subviews.first {
             let valueForKey = barBackgroundView.value(forKey:)
             
             if let shadowView = valueForKey("_shadowView") as? UIView {
@@ -45,7 +45,7 @@ public extension UIViewController {
     
     //显示底部黑线
     public func ts_shadowShow() {
-        if let barBackgroundView = navigationController?.navigationBar.subviews[0] {
+        if let barBackgroundView = navigationController?.navigationBar.subviews.first {
             let valueForKey = barBackgroundView.value(forKey:)
             
             if let shadowView = valueForKey("_shadowView") as? UIView {
