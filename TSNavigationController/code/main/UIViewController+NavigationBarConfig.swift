@@ -82,16 +82,20 @@ public extension UIViewController {
     public func ts_navBarImg(img: UIImage) {
         
         if ts_naviBackgroundImageView == nil {
-            navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-            ts_shadowHidden()
-            let naviHeight = ts_naviBarHeight()
             
+            if navigationController?.navigationBar.subviews.first != nil {
+                navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                ts_shadowHidden()
+                let naviHeight = ts_naviBarHeight()
+                
+                
+                ts_naviBackgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: naviHeight))
+                ts_naviBackgroundImageView?.autoresizingMask = .flexibleWidth
+                ts_naviBackgroundImageView?.contentMode = .scaleAspectFill
+                ts_naviBackgroundImageView?.clipsToBounds = true
+                navigationController?.navigationBar.subviews.first?.insertSubview(ts_naviBackgroundImageView ?? UIImageView(), at: 0)
+            }
             
-            ts_naviBackgroundImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: naviHeight))
-            ts_naviBackgroundImageView?.autoresizingMask = .flexibleWidth
-            ts_naviBackgroundImageView?.contentMode = .scaleAspectFill
-            ts_naviBackgroundImageView?.clipsToBounds = true
-            navigationController?.navigationBar.subviews.first?.insertSubview(ts_naviBackgroundImageView ?? UIImageView(), at: 0)
         }
         if ts_naviBackgroundImageView?.isHidden == true {
             ts_naviBackgroundImageView?.isHidden = false
