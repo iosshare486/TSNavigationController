@@ -45,7 +45,7 @@ public class TSWrapViewController: UIViewController {
         wrapViewController.visibleViewController = viewContoller
         wrapViewController.hidesBottomBarWhenPushed = viewContoller.hidesBottomBarWhenPushed
         wrapViewController.view.addSubview(wrapNavController.view)
-        wrapViewController.addChildViewController(wrapNavController)
+        wrapViewController.addChild(wrapNavController)
         
         viewContoller.addObserver(wrapViewController, forKeyPath: "hidesBottomBarWhenPushed", options: .new, context: nil)
         
@@ -62,7 +62,7 @@ public class TSWrapViewController: UIViewController {
     
     public func rootViewController() -> UIViewController {
         
-        let nav: TSVisibleNavigationController = self.childViewControllers.first as! TSVisibleNavigationController
+        let nav: TSVisibleNavigationController = self.children.first as! TSVisibleNavigationController
         return nav.viewControllers.first ?? nav
     }
     

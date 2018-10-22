@@ -16,8 +16,8 @@ class TSTabbarSecondViewController: UIViewController {
         self.ts_isTranslucent(translucent: false)
         self.ts_shadowHidden()
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        button.addTarget(self, action: #selector(buttonOnClick), for: UIControlEvents.touchUpInside)
-        button.setTitle("TSTabbarSecondViewController", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(buttonOnClick), for: UIControl.Event.touchUpInside)
+        button.setTitle("TSTabbarSecondViewController", for: UIControl.State.normal)
         button.backgroundColor = .blue
         self.view.addSubview(button)
         self.view.backgroundColor = UIColor.white

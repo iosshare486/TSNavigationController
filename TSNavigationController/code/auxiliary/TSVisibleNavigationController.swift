@@ -36,7 +36,7 @@ public class TSVisibleNavigationController: UINavigationController {
         
         let image = UIImage.init(named: "tsnavigitionBackArrow", in: bundle, compatibleWith: nil)
         
-        viewController.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: image, style: UIBarButtonItemStyle.done, target: self, action: #selector(pop))]
+        viewController.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: image, style: UIBarButtonItem.Style.done, target: self, action: #selector(pop))]
         self.parent?.navigationController?.pushViewController(TSWrapViewController.wrapViewController(withViewController: viewController), animated: animated)
     }
     

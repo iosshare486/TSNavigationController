@@ -75,7 +75,7 @@ public extension UIViewController {
     
     //设置导航栏标题颜色
     public func ts_navTitleColor(color: UIColor) {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: color]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color]
     }
     
     //设置导航栏图片(支持透明度调整)

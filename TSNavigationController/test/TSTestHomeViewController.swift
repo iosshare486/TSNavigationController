@@ -20,8 +20,8 @@ class TSTestHomeViewController: UIViewController {
         self.ts_navTitleColor(color: UIColor.blue)
         self.ts_navTintColor(color: UIColor.cyan)
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        button.addTarget(self, action: #selector(buttonOnClick), for: UIControlEvents.touchUpInside)
-        button.setTitle("TSTestHomeViewController", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(buttonOnClick), for: UIControl.Event.touchUpInside)
+        button.setTitle("TSTestHomeViewController", for: UIControl.State.normal)
         button.backgroundColor = .blue
         self.view.addSubview(button)
         self.view.backgroundColor = UIColor.cyan
