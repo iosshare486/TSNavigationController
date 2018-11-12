@@ -119,4 +119,11 @@ public extension UIViewController {
         }
     }
     
+    //是否禁止侧滑返回
+    public func ts_allowInteractivePop(isAllow: Bool) {
+        
+        if self.navigationController?.parent?.navigationController is TSNavigationController {
+            (self.navigationController?.parent?.navigationController as! TSNavigationController).isAllowInteractivePop = isAllow
+        }
+    }
 }

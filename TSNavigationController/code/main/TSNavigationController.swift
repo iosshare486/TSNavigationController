@@ -28,12 +28,33 @@ public class TSNavigationController: UINavigationController, UINavigationControl
             return _visibleNavitionController
         }
     }
+    // 是否允许侧滑返回
+    public var isAllowInteractivePop = true {
+        
+        didSet {
+            
+            if isAllowInteractivePop {
+                self.delegate = self
+                self.interactivePopGestureRecognizer?.delegate = nil
+            }else {
+                self.delegate = recordDelegate
+                self.interactivePopGestureRecognizer?.delegate = recordRecognizerDelegate
+            }
+        }
+    }
+    //记录原生self.delegate
+    private var recordDelegate: UINavigationControllerDelegate?
+    //记录原生self.interactivePopGestureRecognizer?.delegate
+    private var recordRecognizerDelegate: UIGestureRecognizerDelegate?
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarHidden(true, animated: false)
-        self.delegate = self
-        self.interactivePopGestureRecognizer?.delegate = nil
+        
+        recordDelegate = self.delegate
+        recordRecognizerDelegate = self.interactivePopGestureRecognizer?.delegate
+        
+        self.isAllowInteractivePop = true
     }
     
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
