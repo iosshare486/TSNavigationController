@@ -29,16 +29,11 @@ public class TSNavigationController: UINavigationController, UINavigationControl
         }
     }
     
-    /// 是否允许侧滑返回
-    public var isAllowInteractivePop = true
-    
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarHidden(true, animated: false)
-        if isAllowInteractivePop {
-            self.delegate = self
-            self.interactivePopGestureRecognizer?.delegate = nil
-        }
+        self.delegate = self
+        self.interactivePopGestureRecognizer?.delegate = nil
     }
     
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
